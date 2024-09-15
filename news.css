@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --main-color: #e88b0f;
+    --black: #000;
+    --light-color: #868e96;
+
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+
+}
+
+::selection{
+    background: var(--main-color);
+    color: #fff;
+}
+
+::html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #fafafa;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    background: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--main-color);
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: var(--main-color);
+    color: #fff;
+    letter-spacing: .1rem;
+}
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the base styles for the entire page */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--black);
+    background-color: #fff;
+}
+
+/* Header styles */
+header {
+    background-image: url('pics/BG-NEWS.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 .black {
+    color: var(--black);
+}
+
+header h1 .white {
+    color: #fff;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+}
+
+/* Article styles */
+article {
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+article h2 {
+    font-size: 28px;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6; /* Improved line height for better readability */
+    text-align: justify; /* Justify the text */
+    margin-bottom: 20px; /* Add spacing between paragraphs */
+    text-indent: 20px; /* Indent the first line of each paragraph */
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* "Read more" button */
+.article .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--main-color);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.article .btn:hover {
+    background: #fff;
+    color: var(--main-color);
+}
+
+/* Footer styles */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    article {
+        margin: 0;
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+
+    article p {
+        font-size: 14px;
+    }
+
+    article img {
+        margin-top: 10px;
+    }
+}

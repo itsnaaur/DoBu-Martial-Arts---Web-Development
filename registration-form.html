@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="stylesheet" type="text/css" href="registration.css">
+
+    <body>
+
+        <section class="section">
+        <h1 class="heading">REGISTER TO JOIN <span>DOBU MARTIAL ARTS</span></h1>
+
+        <div class="registration-form">
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <input type="password" id="confirm_password" placeholder="Confirm Password">
+
+            <label for="membership_plan">Prices and Membership Options</label> 
+            <select id="membership_plan">
+                <option value="Basic Membership">Basic Membership</option>
+                <option value="Intermediate Membership">Intermediate Membership</option>
+                <option value="Advanced Membership">Advanced Membership</option>
+                <option value="Elite Membership">Elite Membership</option>
+                <option value="Private Martial Arts Lessons">Private Martial Arts Lessons</option>
+                <option value="Junior Membership">Junior Membership</option>
+                <option value="None">None</option>
+            </select>
+
+            <label for="special_plan">Special Courses and Fitness Training</label> 
+            <select id="special_plan">
+                <option value="Beginners' Self-Defense Course">Beginners' Self-Defense Course</option>
+                <option value="Fitness Facility Usage">Fitness Facility Usage</option>
+                <option value="Personal fitness training">Personal Fitness Training</option>
+                <option value="None">None</option>
+
+            </select>
+            <button class="btn" onclick="registerUser()">Register</button>
+        </div>
+        </section>
+
+        <script>
+        function registerUser() {
+            // Retrieve user input from form fields
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
+            var membership_plan = document.getElementById("membership_plan").value;
+            var special_plan = document.getElementById("special_plan").value;
+
+            // Perform basic client-side validation
+            if (name.trim() === "" || email.trim() === "" || password.trim() === "" || confirm_password.trim() === "") {
+                alert("Please fill in all the required fields.");
+                return;
+            }
+
+            if (password !== confirm_password) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // Display a confirmation message
+            var message = "Registration successful!\n";
+            message += "Name: " + name + "\n";
+            message += "Email: " + email + "\n";
+            message += "Membership Plan: " + membership_plan + "\n";
+            message += "Special Plan: " + special_plan + "\n";
+
+            alert(message);
+
+            // You can optionally submit the form data to your server for actual registration.
+            // This example only displays a confirmation message.
+            }
+        </script>
+
+    </body>
+</html>
